@@ -93,11 +93,11 @@ body {
 
 .hero h1 {
     font-family: var(--font-header);
-    font-size: 3rem; /* Daha büyük font boyutu */
-    color: var(--accent-gold); /* Sarı yazı rengi */
-    text-decoration: underline; /* Alt çizgi */
-    text-decoration-color: var(--accent-gold); /* Alt çizgi rengini sarıya ayarla */
-    text-decoration-thickness: 3px; /* Alt çizginin kalınlığını artır */
+    font-size: 3rem; 
+    color: var(--accent-gold); 
+    text-decoration: underline; 
+    text-decoration-color: var(--accent-gold); 
+    text-decoration-thickness: 3px; 
 }
 
 
@@ -118,7 +118,7 @@ body {
 .characters-section h2 {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    color: #d4af37; /* Altın rengi */
+    color: #d4af37; 
 }
 
 .characters-table {
@@ -238,7 +238,7 @@ footer {
     margin: 0 0.5rem;
 }
 
-/* Responsive Design */
+/* Responsive Part */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
