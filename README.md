@@ -1,6 +1,6 @@
 
 # Insider CodeCraft Bootcamp 2025 Alıştırma ve Projeler
-<img src="./screenshots/insider-1.jpg" alt="Example Image" width="70" height="70">
+<img src="./screenshots/insider-1.jpg" alt="Example Image" width="100" height="100">
 
 
 ## 1. HAFTA
