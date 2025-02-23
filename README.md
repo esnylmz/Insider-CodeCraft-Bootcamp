@@ -1,5 +1,7 @@
 
 # Insider CodeCraft Bootcamp 2025 Alıştırma ve Projeler
+![Logo](./screenshots/png-clipart-insider-logo-tech-companies.png)
+
 
 ## 1. HAFTA
 
