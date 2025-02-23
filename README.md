@@ -4,6 +4,7 @@
 ## 1. HAFTA
 
 ### Proje
+![Example Image](./screenshots/proje_1.jpg)
 
 
 ### 1.3
