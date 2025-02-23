@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kayıt Ol</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Kayıt Ol</h2>
+        <form action="#" method="POST">
+            <!-- İsim-Soyisim -->
+            <label for="fullname">İsim-Soyisim:</label>
+            <input type="text" name="fullname" id="fullname" required>
+
+            <!-- Email -->
+            <label for="email">Email Adresiniz:</label>
+            <input type="email" name="email" id="email" required>
+
+            <!-- Doğum Tarihi -->
+            <label for="birthdate">Doğum Tarihi:</label>
+            <input type="date" name="birthdate" id="birthdate" required>
+
+            <!-- Telefon -->
+            <label for="phone">Telefon:</label>
+            <input type="tel" name="phone" id="phone" required>
+
+            <!-- Şifre -->
+            <label for="password">Şifre:</label>
+            <input type="password" name="password" id="password" required>
+
+            <!-- Şifre Tekrar -->
+            <label for="confirm-password">Şifre Tekrar:</label>
+            <input type="password" name="confirm-password" id="confirm-password" required>
+
+            <!-- Kayıt Butonu -->
+            <button type="submit">Kayıt Ol</button>
+        </form>
+        <p>Zaten hesabınız var mı? <a href="/giris">Giriş Yap</a></p>
+    </div>
+</body>
+</html>
