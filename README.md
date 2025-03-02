@@ -8,6 +8,7 @@
 ### Proje
 ![Example Image](./screenshots/proje_1.jpg)
 
+![Example Image](./screenshots/proje_1.2.jpg)
 
 ### 1.3
 ![Example Image](./screenshots/1.3.jpg)
