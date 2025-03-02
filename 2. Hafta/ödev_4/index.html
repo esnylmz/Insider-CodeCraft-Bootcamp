@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerçek Zamanlı Görev Yönetimi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Görev Yönetimi</h1>
+        <form id="taskForm">
+            <input type="text" id="taskInput" placeholder="Görev adı">
+            <select id="prioritySelect">
+                <option value="">Göreviniz için bir öncelik seçin</option>
+                <option value="high">Yüksek</option>
+                <option value="medium">Orta</option>
+                <option value="low">Düşük</option>
+            </select>
+            <button type="submit">Görev Ekle</button>
+        </form>
+        <p id="errorMessage" class="error"></p>
+        <div class="filters">
+            <button id="filterCompleted">Tamamlananları Göster</button>
+            <button id="sortByPriority">Önceliğe Göre Sırala</button>
+        </div>
+        <div id="taskList"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
