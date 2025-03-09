@@ -5,10 +5,11 @@
 
 ## 2. HAFTA
 
-# Proje 3: Geri Sayım Sayacı:
+### Proje 3: Geri Sayım Sayacı:
+![Example Image](./screenshots/Proje2_3.jpg)
 
-# Proje 4: Görev Yönetim Sistemi:
-
+### Proje 4: Görev Yönetim Sistemi:
+![Example Image](./screenshots/Proje2_4.jpg)
 
 
 #
