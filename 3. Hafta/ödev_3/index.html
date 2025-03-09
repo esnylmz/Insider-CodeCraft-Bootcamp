@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Başvuru Formu</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align:center;
+            margin-top:100px;
+        }
+        #apply{
+            width:100px;
+            height:40px;
+        }
+        #basvuru {
+            display: none;
+            width: 300px;
+            margin: 120px auto; 
+            padding: 20px;
+            border: 1px solid #ccc;
+            background: #aaddf6;
+            border-radius: 5px;
+        }
+        .error {
+            color: red;
+            font-weight: 100;
+            font-size: 12px;
+        }
+        #message {
+            display: none;
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="apply">Başvuru Yap</button>
+
+    <div id="basvuru">
+        <h2>Başvuru Formu</h2>
+        <form id="basvuruFormu">
+            <label>İsim: </label>
+            <input type="text" name="ad" required><br><br>
+        
+            <label>Soyisim: </label>
+            <input type="text" name="soyad" required><br><br>
+
+            <label>E-mail: </label>
+            <input type="text" name="mail" required><br><br>
+
+            <label>Telefon: </label>
+            <input type="text" name="phone" required><br><br>
+
+            <label>Pozisyon: </label>
+            <input type="text" name="position" required><br><br>
+
+            <label>Doğum Tarihi: </label>
+            <input type="text" id="birthData" name="birthData"><br><br>
+
+            <button type="submit">Formu Gönder</button>
+            <button type="button" id="closeForm">Kapat</button>
+        </form>
+        <p id="message">Başvurunuz alındı! Detaylar formda belirttiğiniz mail adresine iletilecektir.</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#apply").click(function(){
+                $("#basvuru").fadeIn();
+                });
+            $("#closeForm").click(function(){
+                $("#basvuru").fadeOut();
+                $("#basvuruFormu")[0].reset(); // Formu sıfırla
+                $("#basvuruFormu").validate().resetForm(); // jQuery Validate hata mesajlarını temizle
+                $(".error").removeClass("error"); // Hata class'larını kaldır
+                $("label.error").remove(); // Hata mesajlarını tamamen DOM'dan kaldır
+                $("#message").hide(); // Başvuru alındı mesajını gizle
+            });
+
+            //telefon numarası kontrolü
+            $('input[name="phone"]').mask('(999) 999-9999');
+
+            //tarih seçici
+            $("#birthData").datepicker({
+                dateFormat: "dd-mm-yy",
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "1945:2025"
+            });
+
+            //form validasyonları
+            $("#basvuruFormu").validate({
+                rules: {
+                    ad: "required",
+                    soyad: "required",
+                    mail: {
+                        required: true,
+                        email: true
+                    },
+                    phone: {
+                        required: true,
+                        minlength: 10
+                    },
+                    position: "required"
+                },
+                messages: {
+                    ad: "Lütfen isminizi giriniz...",
+                    soyad: "Lütfen soyisminizi giriniz...",
+                    mail: "Geçerli bir e-posta giriniz...",
+                    phone: "Geçerli bir telefon numarası giriniz...",
+                    position: "Çalışmak istediğiniz pozisyon adını giriniz..."
+                },
+                submitHandler: function(form) {
+                    $("#message").fadeIn().delay(3000).fadeOut(500, function() {
+                        form.reset(); // FadeOut tamamlandıktan sonra form sıfırlanır.
+                    });
+                }
+            });
+
+
+            });
+
+
+
+    </script>
+
+</body>
+</html>

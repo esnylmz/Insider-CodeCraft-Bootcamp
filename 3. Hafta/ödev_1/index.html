@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+ <style>
+    body{
+        font-family:Arial, sans-serif;
+        text-align:center;
+        padding-top: 100px;
+    }
+
+    ul{
+        list-style:none;
+        padding:0;
+    }
+
+    li{
+        background: #f4f4f4;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .completed{
+        text-decoration:line-through;
+        color:red;
+    }
+
+    button{
+        cursor:pointer;
+        padding: 5px 10px;
+    }
+
+ </style>
+</head>
+
+<body>
+    <input id="input" type="text" placeholder="görev">
+    <p id="task">Eklemek istediğiniz görevi yazınız...</p>
+    <button id="ekle">Görev Ekle</button>
+
+    <ul id="taskList"></ul>
+    
+
+    <script>
+        $(document).ready(function () {
+            $("#ekle").click(function () {
+                let taskText= $("#input").val().trim();
+
+                if(taskText !== ""){
+                    let listItem = $("<li></li>").text(taskText);
+                    let tamamlaButonu = $("<button>Tamamlandı</button>").click(function(){
+                        listItem.toggleClass("completed");
+                    });
+                
+                    let silButonu=$("<button>Görevi Sil</button>").click(function(){
+                        listItem.remove();
+                    });
+
+                    listItem.append(tamamlaButonu, silButonu);
+                    $("#taskList").append(listItem);
+
+                    $("#input").val("");
+
+                }else{
+                    alert("Lütfen bir görev giriniz!!")
+                }
+
+            });
+        });
+    </script>
+    
+</body>
+</html>

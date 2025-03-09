@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id="listProducts">Ürünleri Listele</button>
+    <div id="productList"></div>
+    
+
+    <script>
+        $(document).ready(function(){
+            $('#listProducts').on('click',function(){
+
+                $.getJSON('ürünler.json',function(data){
+                    $('#productList').empty();
+
+                    data.forEach(function(product){
+                        const productCard= `
+                        <div class="product-card">
+                            <h3>${product.name}</h3>
+                            <p>Fiyat: ${product.price}</p>
+                            <a href="${product.link}" target="_blank">Ürüne Git</a>
+                        </div>
+                        `;
+                        $('#productList').append(productCard);
+                    });
+                }).fail(function(){
+                    alert("Ürün verisi yüklenemedi")
+                });
+
+            });
+        });
+
+    </script>
+</body>
+</html>

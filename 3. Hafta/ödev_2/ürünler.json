@@ -1,0 +1,18 @@
+[
+    {
+      "name": "Ürün 1",
+      "price": "100 TL",
+      "link": "https://www.example.com/product1"
+    },
+    {
+      "name": "Ürün 2",
+      "price": "150 TL",
+      "link": "https://www.example.com/product2"
+    },
+    {
+      "name": "Ürün 3",
+      "price": "200 TL",
+      "link": "https://www.example.com/product3"
+    }
+  ]
+  

@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Ürün X",
+        "price": "1000 TL",
+        "link": "https://example.com/urunx",
+        "details": "1.4 inçlik AMOLED ekranı ile harika bir görüntü sunar, su geçirmez ve toza dayanıklı yapısıyla dış mekan aktivitelerinizde size eşlik eder. 7 günlük batarya ömrü ile sürekli şarj derdi olmadan uzun süre kullanılabilir "
+    },
+    {
+        "id": 2,
+        "name": "Ürün Y",
+        "price": "2000 TL",
+        "link": "https://example.com/uruny",
+        "details": "Bu ürün iade kapsamında yer almamaktadır!!"
+    },
+    {
+        "id": 3,
+        "name": "Ürün Z",
+        "price": "1200 TL",
+        "link": "https://example.com/urunz",
+        "details": "Ürünümüz orijinaldir ve 3 iş günü içerisinde sizin için hazırlanıp teslim edilir."
+    }
+]
